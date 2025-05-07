@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="../css/giohang.css">
+</head>
+<body>
+  <div class="header">
+    <div class="navbar-custom">
+      <ul class="nav nav-links">
+        <li class="nav-item">
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo">
+          </a>
+        </li>
+        <li class="nav-item" id="auth-link"></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goToThanhToan(event)">Thanh toán</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">CONTACT : 086868686</a>
+        </li>
+      </ul>
+    
+      <div class="search-wrapper">
+        <input type="text" placeholder="What are you looking for?">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="menu-wrapper">
+      <div class="menu-left">
+        <div class="menu-item">
+          <a href="../html/NewProduct.html" style="text-decoration: none; color: white;">
+            <i class="fas fa-shopping-basket"></i> New Products
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="../index.html#best-sales" style="text-decoration: none; color: white;">
+            Best Sales <span class="badge">HOT</span>
+          </a>
+          
+        </div>
+        <div class="menu-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Danh mục sản phẩm 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="offersDropdown">
+            <a class="dropdown-item" href="../index.html#may-dien">Máy Cơ Khí Dùng Điện</a>
+            <a class="dropdown-item" href="../index.html#may-nn">Máy Nông Nghiệp</a>
+            <a class="dropdown-item" href="../index.html#may-pin">Máy Cơ Khí Dùng Pin</a>
+          </div>
+        </div>
+        
+        <div class="menu-item">News</div>
+      </div>
+    
+      <div class="menu-right">
+        <a href="../html/GioHang.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <h1>Giỏ Hàng Hoa</h1>
+  <div class="cart-section">
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Tên Sản Phẩm</th>
+          <th>Giá</th>
+          <th>Số Lượng</th>
+          <th>Tổng</th>
+          <th></th> 
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+      </tbody>
+    </table>
+    <div id="total-price">
+      Tổng: <span id="total-amount">0₫</span>
+    </div> 
+</div>
+
+    <a href="ThanhToan.html" id="checkout-button" class="btn btn-primary mt-3">Thanh Toán</a>
+  </div>
+  <hr style="border: none; height: 2px; background-color:rgb(228, 155, 146);">
+  <footer  class="py-5" style="color: rgb(229, 171, 163);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <img src="../img/logo.png" alt="FlowerCorner logo" class="mb-3" style="max-width: 150px;">
+          <p class="mb-1">Hotline: 1999 999 999 - 0888 888 888</p>
+          <p class="mb-3">Email: lafleur@gmail.com</p>
+  
+          <img src="../img/qr-code.png" alt="QR Code" class="mb-2" style="width: 100px;">
+          <p class="mb-2">Tải ứng dụng ngay!</p>
+          <div class="d-flex">
+            <img src="../img/appstore.png" alt="App Store" class="mr-2" style="width: 110px;">
+            <img src="../img/ggplay.png" alt="Google Play" style="width: 110px;">
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="font-weight-bold mb-3">CHĂM SÓC KHÁCH HÀNG</h5>
+          <ul class="list-unstyled" >
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Chính Sách Vận Chuyển</a></li>
+            <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+            <li><a href="#">Hình Thức Thanh Toán</a></li>
+            <li><a href="#">Bảo Mật Thông Tin</a></li>
+            <li><a href="#">Chính Sách Hoàn Tiền</a></li>
+            <li><a href="#">Xử Lý Khiếu Nại</a></li>
+            <li><a href="#">Tại Sao Nên Chọn FlowerCorner.vn</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5 class="font-weight-bold mb-3">THEO DÕI</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="font-weight-bold mb-3">SHOP HOA LAFLEUR</h5>
+          <p><strong>Cửa hàng chính:</strong><br>1 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Cửa Hàng TP.HCM:</strong><br>111 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Chi nhánh Hà Nội:</strong><br>11, Ba Đình, Hà Nội</p>
+          <p><strong>CÔNG TY TNHH NKT</strong><br>Mã số thuế: 0123456789</p>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Hàm cập nhật số lượng giỏ hàng trên giao diện
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let total = 0;
+    cart.forEach(item => {
+        total += item.quantity;
+    });
+
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+        cartCount.innerText = total;
+    }
+}
+
+// Hàm cập nhật giỏ hàng trên giao diện
+function updateCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalAmountContainer = document.getElementById('total-amount');
+    cartItemsContainer.innerHTML = ''; // Xóa giỏ hàng cũ
+    let totalPrice = 0;
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cart.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.price.toLocaleString()}₫</td>
+            <td><input type="number" class="quantity-input" value="${item.quantity}" min="1" max="10" data-name="${item.name}"></td>
+            <td>${(item.price * item.quantity).toLocaleString()}₫</td>
+            <td><button class="remove-btn" data-name="${item.name}">Xóa</button></td>
+        `;
+        cartItemsContainer.appendChild(row);
+        totalPrice += item.price * item.quantity;
+    });
+
+    totalAmountContainer.textContent = totalPrice.toLocaleString() + '₫';
+
+    updateCartCount(); // Cập nhật lại số lượng giỏ hàng
+}
+
+// Hàm thêm sản phẩm vào giỏ hàng
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const name = button.getAttribute('data-name');
+        const price = parseInt(button.getAttribute('data-price'));
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity += 1; // Tăng số lượng sản phẩm nếu đã có trong giỏ hàng
+        } else {
+            cart.push({ name, price, quantity: 1 }); // Thêm mới sản phẩm vào giỏ hàng
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart)); // Lưu giỏ hàng vào localStorage
+        updateCart(); // Cập nhật giỏ hàng trên giao diện
+    });
+});
+
+// Cập nhật số lượng giỏ hàng khi người dùng thay đổi số lượng
+document.getElementById('cart-items').addEventListener('input', function(event) {
+    if (event.target.classList.contains('quantity-input')) {
+        const quantity = parseInt(event.target.value);
+        const productName = event.target.getAttribute('data-name');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const product = cart.find(item => item.name === productName);
+
+        if (product) {
+            product.quantity = Math.min(Math.max(quantity, 1), 10); // Giới hạn số lượng từ 1 đến 10
+            localStorage.setItem('cart', JSON.stringify(cart)); // Lưu lại giỏ hàng
+            updateCart(); // Cập nhật giỏ hàng sau khi thay đổi số lượng
+        }
+    }
+});
+
+// Xóa sản phẩm khỏi giỏ hàng
+document.getElementById('cart-items').addEventListener('click', function(event) {
+    if (event.target.classList.contains('remove-btn')) {
+        const productName = event.target.getAttribute('data-name');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart = cart.filter(item => item.name !== productName); // Lọc ra sản phẩm cần xóa
+
+        localStorage.setItem('cart', JSON.stringify(cart)); // Lưu lại giỏ hàng sau khi xóa sản phẩm
+        updateCart(); // Cập nhật giỏ hàng
+    }
+});
+
+// Cập nhật giỏ hàng khi trang được tải
+document.addEventListener('DOMContentLoaded', function() {
+    updateCart(); // Hiển thị giỏ hàng khi trang tải
+    updateCartCount(); // Cập nhật số lượng giỏ hàng khi trang tải
+});
+
+    function updateAuthLink() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const authLink = document.getElementById('auth-link');
+
+      if (isLoggedIn) {
+        authLink.innerHTML = `<a class="nav-link" href="#" onclick="logout()">Đăng xuất</a>`;
+      } else {
+        authLink.innerHTML = `<a class="nav-link" href="../html/DangNhap.html">Đăng nhập</a>`;
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('user');
+      localStorage.removeItem('cart');
+      alert("Bạn đã đăng xuất!");
+      updateAuthLink();
+      window.location.href = "../index.html";
+    }
+    document.addEventListener('DOMContentLoaded', updateAuthLink);
+    function goToThanhToan(event) {
+      event.preventDefault();
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn) {
+        alert("Bạn cần đăng nhập để tiếp tục thanh toán!");
+        window.location.href = "../html/DangNhap.html"; 
+      } else {
+        window.location.href = "./ThanhToan.html";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Nông Nghiệp</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="../css/menu.css">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="navbar-custom">
+        <ul class="nav nav-links">
+            <li class="nav-item">
+            <a href="../index.html">
+                <img src="../img/logo.png" alt="Logo">
+            </a>
+            </li>
+            <li class="nav-item" id="auth-link"></li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" onclick="goToThanhToan(event)">Thanh toán</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#">CONTACT : 086868686</a>
+            </li>
+        </ul>
+        
+        <div class="search-wrapper">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit">
+            <i class="fas fa-search"></i>
+            </button>
+        </div>
+        </div>
+        <div class="menu-wrapper">
+        <div class="menu-left">
+            <div class="menu-item">
+            <a href="../html/NewProduct.html" style="text-decoration: none; color: white;">
+                <i class="fas fa-shopping-basket"></i> New Products
+            </a>
+            </div>
+            <div class="menu-item">
+            <a href="../index.html#best-sales" style="text-decoration: none; color: white;">
+                Best Sales <span class="badge">HOT</span>
+            </a>
+            
+            </div>
+            <div class="menu-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Danh mục sản phẩm 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="offersDropdown">
+                <a class="dropdown-item" href="../index.html#may-dien">Máy Cơ Khí Dùng Điện</a>
+                <a class="dropdown-item" href="../index.html#may-nn">Máy Nông Nghiệp</a>
+                <a class="dropdown-item" href="../index.html#may-pin">Máy Cơ Khí Dùng Pin</a>
+              </div>
+            </div>
+            
+            <div class="menu-item">News</div>
+        </div>
+        
+        <div class="menu-right">
+            <a href="../html/GioHang.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+            </a>
+        </div>
+        </div>
+    </div>
+  <section class="category-section">
+    <h2 class="category-title">
+      Máy <span>Nông Nghiệp</span>
+    </h2>
+    
+  </section>
+  <section class="products-section">
+    <div class="products-grid">
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=1">
+          <img src="../img/sp1.png" alt="Máy cưa xích chạy xăng HYUNDAI HD-8520">
+          <p class="name">Máy cưa xích HYUNDAI HD-8520</p>
+          <p class="price">2.610.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cưa xích HYUNDAI HD-8520" data-price="2610000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=2">
+          <img src="../img/sp2.png" alt="Máy cưa xích mini HYUNDAI HD-4111">
+          <p class="name">Máy cưa mini HYUNDAI HD-4111</p>
+          <p class="price">2.750.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cưa mini HYUNDAI HD-4111" data-price="2750000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=3">
+          <img src="../img/sp3.png" alt="Máy cưa xích chạy xăng HYUNDAI HD-8050">
+          <p class="name">Máy cưa xích HYUNDAI HD-8050</p>
+          <p class="price">3.300.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cưa xích HYUNDAI HD-8050" data-price="3300000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=4">
+          <img src="../img/sp9.png" alt="Bình xịt điện phun sương cầm tay Pana 2 lít">
+          <p class="name">Bình phun sương Pana 2L</p>
+          <p class="price">450.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Bình phun sương Pana 2L" data-price="450000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=5">
+          <img src="../img/sp10.png" alt="Bình xịt điện OSHIMA OS20">
+          <p class="name">Bình xịt điện OS20</p>
+          <p class="price">1.100.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Bình xịt điện OS20" data-price="1100000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=6">
+          <img src="../img/sp11.png" alt="Bình điện phun thuốc OS20-SP">
+          <p class="name">Bình điện OS20-SP</p>
+          <p class="price">1.340.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Bình điện OS20-SP" data-price="1340000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=7">
+          <img src="../img/sp12.png" alt="Bình điện hai bơm OS20 DP">
+          <p class="name">Bình điện hai bơm OS20 DP</p>
+          <p class="price">1.380.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Bình điện hai bơm OS20 DP" data-price="1380000">Mua Ngay</a>
+      </div>
+  
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=8">
+          <img src="../img/sp13.png" alt="Máy phun thuốc cầm tay MOTOKAWA MK-65">
+          <p class="name">Máy phun thuốc MOTOKAWA MK-65</p>
+          <p class="price">700.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy phun thuốc MOTOKAWA MK-65" data-price="700000">Mua Ngay</a>
+      </div>
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=30">
+          <img src="../img/sp30.png" alt="Máy phun thuốc cầm tay MOTOKAWA MK-65B">
+          <p class="name">Máy phun thuốc MOTOKAWA MK-65B</p>
+          <p class="price">990.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy phun thuốc MOTOKAWA MK-65B" data-price="990000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=31">
+          <img src="../img/sp31.png" alt="Máy cưa xích điện Hyundai HCX405 1500W lam 4 tấc">
+          <p class="name">Máy cưa xích Hyundai HCX405</p>
+          <p class="price">2.130.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cưa xích Hyundai HCX405" data-price="2130000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=32">
+          <img src="../img/sp32.png" alt="Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-260 - 1Hp">
+          <p class="name">Máy cắt cỏ MK-260 - 1Hp</p>
+          <p class="price">1.830.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-260 - 1Hp" data-price="1830000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=33">
+          <img src="../img/sp33.png" alt="Máy cắt cỏ mini chạy xăng 2 thì MOTOKAWA MK-261 - 1Hp">
+          <p class="name">Máy cắt cỏ MK-261 - 1Hp</p>
+          <p class="price">1.830.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-261 - 1Hp" data-price="1830000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=34">
+          <img src="../img/sp34.png" alt="Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-330 - 1.2Hp">
+          <p class="name">Máy cắt cỏ MK-330 - 1.2Hp</p>
+          <p class="price">1.920.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-330 - 1.2Hp" data-price="1920000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=35">
+          <img src="../img/sp35.png" alt="Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-331 - 1.2Hp">
+          <p class="name">Máy cắt cỏ MK-331 - 1.2Hp</p>
+          <p class="price">1.920.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-331 - 1.2Hp" data-price="1920000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=36">
+          <img src="../img/sp36.png" alt="Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-411 - 2Hp">
+          <p class="name">Máy cắt cỏ MK-411 - 2Hp</p>
+          <p class="price">1.920.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-411 - 2Hp" data-price="1920000">Mua Ngay</a>
+      </div>
+      
+      <div class="products-box">
+        <a href="../html/product-detail.html?id=37">
+          <img src="../img/sp37.png" alt="Máy cắt cỏ chính hãng 2 thì MOTOKAWA MK-430 - 1.7Hp">
+          <p class="name">Máy cắt cỏ MK-430 - 1.7Hp</p>
+          <p class="price">2.010.000₫</p>
+        </a>
+        <a href="#" class="btn btn-success buy-button" data-name="Máy cắt cỏ MK-430 - 1.7Hp" data-price="2010000">Mua Ngay</a>
+      </div>
+      
+    </div>
+  </section>
+  <hr style="border: none; height: 2px; background-color:rgb(228, 155, 146);">
+  <footer  class="py-5" style="color: rgb(229, 171, 163);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <img src="../img/logo.png" alt="FlowerCorner logo" class="mb-3" style="max-width: 150px;">
+          <p class="mb-1">Hotline: 1999 999 999 - 0888 888 888</p>
+          <p class="mb-3">Email: lafleur@gmail.com</p>
+  
+          <img src="../img/qr-code.png" alt="QR Code" class="mb-2" style="width: 100px;">
+          <p class="mb-2">Tải ứng dụng ngay!</p>
+          <div class="d-flex">
+            <img src="../img/appstore.png" alt="App Store" class="mr-2" style="width: 110px;">
+            <img src="../img/ggplay.png" alt="Google Play" style="width: 110px;">
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="font-weight-bold mb-3">CHĂM SÓC KHÁCH HÀNG</h5>
+          <ul class="list-unstyled" >
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Chính Sách Vận Chuyển</a></li>
+            <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+            <li><a href="#">Hình Thức Thanh Toán</a></li>
+            <li><a href="#">Bảo Mật Thông Tin</a></li>
+            <li><a href="#">Chính Sách Hoàn Tiền</a></li>
+            <li><a href="#">Xử Lý Khiếu Nại</a></li>
+            <li><a href="#">Tại Sao Nên Chọn FlowerCorner.vn</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5 class="font-weight-bold mb-3">THEO DÕI</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="font-weight-bold mb-3">SHOP HOA LAFLEUR</h5>
+          <p><strong>Cửa hàng chính:</strong><br>1 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Cửa Hàng TP.HCM:</strong><br>111 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Chi nhánh Hà Nội:</strong><br>11, Ba Đình, Hà Nội</p>
+          <p><strong>CÔNG TY TNHH NKT</strong><br>Mã số thuế: 0123456789</p>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  <script>
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let totalQuantity = 0;
+      cart.forEach(item => {
+        totalQuantity += item.quantity;
+      });
+      const cartCountElement = document.getElementById('cart-count');
+      if (cartCountElement) {
+        cartCountElement.innerText = totalQuantity;
+      }
+    }
+    document.querySelectorAll('.buy-button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        let isLoggedIn = localStorage.getItem('isLoggedIn');
+        if (!isLoggedIn) {
+          alert("Bạn cần đăng nhập để mua sản phẩm!");
+          window.location.href = "../html/DangNhap.html";
+          return;
+        }
+        const name = this.getAttribute('data-name');
+        const price = parseInt(this.getAttribute('data-price'));
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount(); 
+        alert("Đã thêm vào giỏ hàng!");
+      });
+    });
+    updateCartCount();
+    function updateAuthLink() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const authLink = document.getElementById('auth-link');
+
+      if (isLoggedIn) {
+        authLink.innerHTML = `<a class="nav-link" href="#" onclick="logout()">Đăng xuất</a>`;
+      } else {
+        authLink.innerHTML = `<a class="nav-link" href="../html/DangNhap.html">Đăng nhập</a>`;
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('user');
+      localStorage.removeItem('cart');
+      alert("Bạn đã đăng xuất!");
+      updateAuthLink();
+      window.location.href = "../index.html";
+    }
+    document.addEventListener('DOMContentLoaded', updateAuthLink);
+    function goToThanhToan(event) {
+      event.preventDefault();
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn) {
+        alert("Bạn cần đăng nhập để tiếp tục thanh toán!");
+        window.location.href = "../html/DangNhap.html"; // đổi nếu trang login khác
+      } else {
+        window.location.href = "./ThanhToan.html";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="../css/pd.css">
+    
+</head>
+<body>
+  <div class="header">
+    <div class="navbar-custom">
+      <ul class="nav nav-links">
+        <li class="nav-item">
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo">
+          </a>
+        </li>
+        <li class="nav-item" id="auth-link"></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="goToThanhToan(event)">Thanh toán</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">CONTACT : 086868686</a>
+        </li>
+      </ul>
+    
+      <div class="search-wrapper">
+        <input type="text" placeholder="What are you looking for?">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="menu-wrapper">
+      <div class="menu-left">
+        <div class="menu-item">
+          <a href="../html/NewProduct.html" style="text-decoration: none; color: white;">
+            <i class="fas fa-shopping-basket"></i> New Products
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="../index.html#best-sales" style="text-decoration: none; color: white;">
+            Best Sales <span class="badge">HOT</span>
+          </a>
+          
+        </div>
+        <div class="menu-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="offersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Danh mục sản phẩm 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="offersDropdown">
+            <a class="dropdown-item" href="../index.html#may-dien">Máy Cơ Khí Dùng Điện</a>
+            <a class="dropdown-item" href="../index.html#may-nn">Máy Nông Nghiệp</a>
+            <a class="dropdown-item" href="../index.html#may-pin">Máy Cơ Khí Dùng Pin</a>
+          </div>
+        </div>
+        
+        <div class="menu-item">News</div>
+      </div>
+    
+      <div class="menu-right">
+        <a href="../html/GioHang.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+    
+    <section class="product-detail">
+        <div class="product-img">
+            <img id="product-img" src="" alt="Sản phẩm chi tiết">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">Tên sản phẩm</h1>
+            <p class="description" id="product-description">Mô tả sản phẩm...</p>
+            <p class="price" id="product-price">Giá: 0đ</p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><span class="fw-bold">Điện áp:</span> 12V</li>
+              <li class="mb-2"><span class="fw-bold">Tốc độ không tải:</span> 0-750rpm.</li>
+              <li class="mb-2"><span class="fw-bold">Mô-men xoắn tối đa:</span> 20NM</li>
+              <li class="mb-2"><span class="fw-bold">Khả năng khoan:</span> 0,8-10mm.</li>
+              <li class="mb-2"><span class="fw-bold">Thiết lập mô-men xoắn:</span> 15 + 1</li>
+              <li class="mb-2"><span class="fw-bold">Đèn làm  việc tích hợp.</span></li>
+              <li class="mb-2"><span class="fw-bold">Đèn báo nguồn pin LED</span></li>
+              <li class="mb-2"><span class="fw-bold">Kèm 1 pin 1.5Ah (WLBS5150)</span></li>
+              <li class="mb-2"><span class="fw-bold">Cổng sạc Pin:</span> USB loại-C.</li>
+              <li class="mb-2"><span class="fw-bold">Không kèm dây sạc và đầu sạc.</span></li>
+              <li class="mb-2"><span class="fw-bold">Thương hiệu:</span> Wadfow</li>
+              <li><span class="fw-bold">Bảo hành:</span> 06 tháng</li>
+          </ul>
+            <button class="buy-now buy-button">Mua ngay</button>
+        </div>
+    </section>
+  <hr style="border: none; height: 2px; background-color:rgb(228, 155, 146);">
+  <footer  class="py-5" style="color: rgb(229, 171, 163);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <img src="../img/logo.png" alt="FlowerCorner logo" class="mb-3" style="max-width: 150px;">
+          <p class="mb-1">Hotline: 1999 999 999 - 0888 888 888</p>
+          <p class="mb-3">Email: lafleur@gmail.com</p>
+  
+          <img src="../img/qr-code.png" alt="QR Code" class="mb-2" style="width: 100px;">
+          <p class="mb-2">Tải ứng dụng ngay!</p>
+          <div class="d-flex">
+            <img src="../img/appstore.png" alt="App Store" class="mr-2" style="width: 110px;">
+            <img src="../img/ggplay.png" alt="Google Play" style="width: 110px;">
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="font-weight-bold mb-3">CHĂM SÓC KHÁCH HÀNG</h5>
+          <ul class="list-unstyled" >
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Chính Sách Vận Chuyển</a></li>
+            <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+            <li><a href="#">Hình Thức Thanh Toán</a></li>
+            <li><a href="#">Bảo Mật Thông Tin</a></li>
+            <li><a href="#">Chính Sách Hoàn Tiền</a></li>
+            <li><a href="#">Xử Lý Khiếu Nại</a></li>
+            <li><a href="#">Tại Sao Nên Chọn FlowerCorner.vn</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5 class="font-weight-bold mb-3">THEO DÕI</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="font-weight-bold mb-3">SHOP HOA LAFLEUR</h5>
+          <p><strong>Cửa hàng chính:</strong><br>1 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Cửa Hàng TP.HCM:</strong><br>111 , P.5, Q.1, TP.HCM</p>
+          <p><strong>Chi nhánh Hà Nội:</strong><br>11, Ba Đình, Hà Nội</p>
+          <p><strong>CÔNG TY TNHH NKT</strong><br>Mã số thuế: 0123456789</p>
+        </div>
+  
+      </div>
+    </div>
+
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const products = [
+          { id: 1, name: "Máy cưa xích HYUNDAI HD-8520", description: "Máy cưa xích chạy xăng HYUNDAI HD-8520", price: "2.610.000₫", image: "../img/sp1.png" },
+          { id: 2, name: "Máy cưa xích mini HYUNDAI HD-4111", description: "Máy cưa xích mini HYUNDAI HD-4111", price: "2.750.000₫", image: "../img/sp2.png" },
+          { id: 3, name: "Máy cưa xích HYUNDAI HD-8050", description: "Máy cưa xích chạy xăng HYUNDAI HD-8050", price: "3.300.000₫", image: "../img/sp3.png" },
+          { id: 4, name: "Máy mài mini Hyundai 1001B", description: "Máy mài mini Hyundai HMG1001B", price: "550.000₫", image: "../img/sp4.png" },
+          { id: 5, name: "Máy cắt mài Hyundai 1008", description: "Máy cắt mài Hyundai HMG1008", price: "760.000₫", image: "../img/sp5.png" },
+          { id: 6, name: "Máy cưa điện Hyundai HCX405", description: "Máy cưa xích điện Hyundai HCX405", price: "2.130.000₫", image: "../img/sp6.png" },
+          { id: 7, name: "Máy cắt gạch Total TS3141102", description: "Máy cắt gạch Total TS3141102", price: "960.000₫", image: "../img/sp7.png" },
+          { id: 8, name: "Máy cắt đá INGCO MC14008", description: "Máy cắt đá INGCO MC14008", price: "990.000₫", image: "../img/sp8.png" },
+          {id: 9, name: "Bình phun sương Pana 2L", description: "Bình xịt điện phun sương cầm tay Pana 2 lít", price: "450.000₫", image: "../img/sp9.png" },
+          { id: 10, name: "Bình xịt điện OS20", description: "Bình xịt điện OSHIMA OS20", price: "1.100.000₫", image: "../img/sp10.png" },
+          { id: 11, name: "Bình điện OS20-SP", description: "Bình điện phun thuốc OS20-SP", price: "1.340.000₫", image: "../img/sp11.png" },
+          { id: 12, name: "Bình điện hai bơm OS20 DP", description: "Bình điện hai bơm OS20 DP", price: "1.380.000₫", image: "../img/sp12.png" },
+          { id: 13, name: "Máy phun thuốc MOTOKAWA MK-65", description: "Máy phun thuốc cầm tay MOTOKAWA MK-65", price: "700.000₫", image: "../img/sp13.png" },
+          { id: 14, name: "Máy vặn vít dùng pin Total 12V", description: "Máy vặn vít dùng pin Total 12V TIDLI228121", price: "1.420.000₫", image: "../img/sp14.png" },
+          { id: 15, name: "Máy bắn vít pin 20V Total", description: "Máy bắn vít pin 20V Total TIRLI2002", price: "1.950.000₫", image: "./img/sp15.png" },
+          { id: 16, name: "Máy đánh bóng Total TAPLI2001", description: "Thân máy đánh bóng dùng pin 20V Total TAPLI2001", price: "2.000.000₫", image: "../img/sp16.png" },
+          { id: 17, name: "Máy siết vít 4V Total TSDLI0402", description: "Máy siết vít dùng pin 4V Total TSDLI0402", price: "250.000₫", image: "../img/sp17.png" },
+          { id: 18, name: "Máy vặn vít 4V Total TSDLI0442", description: "Máy vặn vít dùng pin 4V Total TSDLI0442", price: "290.000₫", image: "../img/sp18.png" },
+          { id: 19, name: "Máy vặn vít 4V Total TSDLI0406", description: "Máy vặn vít dùng pin 4V Total TSDLI0406", price: "440.000₫", image: "../img/sp19.png" },
+          { id: 20, name: "Máy vặn vít mini 8V TSDLI0802", description: "Máy vặn vít mini sạc pin 8V Total TSDLI0802", price: "560.000₫", image: "../img/sp20.png" },
+          { id: 21, name: "Máy siết vít Total TSDLI0403", description: "Máy siết vít dùng pin Total TSDLI0403 hàng chính hãng", price: "600.000₫", image: "../img/sp21.png" },
+          { id: 22, name: "Máy cắt đá Stanley STSP125 - 1320W", description: "Máy cắt gạch đá Stanley STSP125 - 1320W", price: "1.120.000₫", image: "../img/sp22.png" },
+          { id: 23, name: "Máy đánh bóng xe hơi Hyundai HMB180", description: "Máy đánh bóng xe hơi Hyundai HMB180 180mm 1200W", price: "1.260.000₫", image: "../img/sp23.png" },
+          { id: 24, name: "Máy cắt gạch Makita M0401B", description: "Máy cắt gạch Makita M0401B - 1200W", price: "1.100.000₫", image: "../img/sp24.png" },
+          { id: 25, name: "Máy cắt Makita 4100NH3 - 1275W", description: "Máy cắt đá gạch Makita 4100NH3 - 1275W", price: "1.690.000₫", image: "../img/sp25.png" },
+          { id: 26, name: "Máy cắt gạch DEKTON DK-CG115", description: "Máy cắt gạch, gỗ DEKTON DK-CG115 - 1500W", price: "860.000₫", image: "../img/sp26.png" },
+          { id: 27, name: "Máy đánh bóng ô tô Total TP1141806-2", description: "Máy đánh bóng ô tô 180mm 1400W Total TP1141806-2", price: "1.580.000₫", image: "../img/sp27.png" },
+          { id: 28, name: "Máy hàn Sasuke ZX7-200R", description: "Máy hàn gia đình Sasuke ZX7-200R", price: "830.000₫", image: "../img/sp28.png" },
+          { id: 29, name: "Máy hàn mini Sasuke ZX7-200F", description: "Máy hàn cầm tay mini Sasuke ZX7-200F", price: "925.000₫", image: "../img/sp29.png" },
+          { id: 30, name: "Máy phun thuốc MOTOKAWA MK-65B", description: "Máy phun thuốc cầm tay MOTOKAWA MK-65B", price: "990.000₫", image: "../img/sp30.png" },
+          { id: 31, name: "Máy cưa xích Hyundai HCX405", description: "Máy cưa xích điện Hyundai HCX405 1500W lam 4 tấc", price: "2.130.000₫", image: "../img/sp31.png" },
+          { id: 32, name: "Máy cắt cỏ MK-260 - 1Hp", description: "Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-260 - 1Hp", price: "1.830.000₫", image: "../img/sp32.png" },
+          { id: 33, name: "Máy cắt cỏ MK-261 - 1Hp", description: "Máy cắt cỏ mini chạy xăng 2 thì MOTOKAWA MK-261 - 1Hp", price: "1.830.000₫", image: "../img/sp33.png" },
+          { id: 34, name: "Máy cắt cỏ MK-330 - 1.2Hp", description: "Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-330 - 1.2Hp", price: "1.920.000₫", image: "../img/sp34.png" },
+          { id: 35, name: "Máy cắt cỏ MK-331 - 1.2Hp", description: "Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-331 - 1.2Hp", price: "1.920.000₫", image: "../img/sp35.png" },
+          { id: 36, name: "Máy cắt cỏ MK-411 - 2Hp", description: "Máy cắt cỏ chạy xăng 2 thì MOTOKAWA MK-411 - 2Hp", price: "1.920.000₫", image: "../img/sp36.png" },
+          { id: 37, name: "Máy cắt cỏ MK-430 - 1.7Hp", description: "Máy cắt cỏ chính hãng 2 thì MOTOKAWA MK-430 - 1.7Hp", price: "2.010.000₫", image: "../img/sp37.png" },  
+        ];
+
+
+        const product = products.find(p => p.id === parseInt(productId));
+
+        if (product) {
+            document.getElementById('product-name').innerText = product.name;
+            document.getElementById('product-description').innerText = product.description;
+            document.getElementById('product-price').innerText = `Giá: ${product.price}`;
+            document.getElementById('product-img').src = product.image;
+
+            const buyButton = document.querySelector('.buy-button');
+            buyButton.setAttribute('data-name', product.name);
+            let priceNumber = parseInt(product.price.replace(/[^\d]/g, ''));
+            buyButton.setAttribute('data-price', priceNumber);
+        } else {
+            document.getElementById('product-name').innerText = "Sản phẩm không tồn tại";
+        }
+
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').innerText = totalQuantity;
+        }
+
+        updateCartCount();
+
+        document.querySelectorAll('.buy-button').forEach(button => {
+            button.addEventListener('click', function (event) {
+            event.preventDefault();
+            let isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                alert("Bạn cần đăng nhập để mua sản phẩm!");
+                window.location.href = "../html/DangNhap.html";
+                return;
+            }
+
+            const name = this.getAttribute('data-name');
+            const price = parseInt(this.getAttribute('data-price'));
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            alert("Đã thêm vào giỏ hàng!");
+            });
+        });
+    });
+
+    function updateAuthLink() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      const authLink = document.getElementById('auth-link');
+
+      if (isLoggedIn) {
+        authLink.innerHTML = `<a class="nav-link" href="#" onclick="logout()">Đăng xuất</a>`;
+      } else {
+        authLink.innerHTML = `<a class="nav-link" href="../html/DangNhap.html">Đăng nhập</a>`;
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('user');
+      localStorage.removeItem('cart');
+      alert("Bạn đã đăng xuất!");
+      updateAuthLink();
+      window.location.href = "../index.html";
+    }
+    document.addEventListener('DOMContentLoaded', updateAuthLink);
+    function goToThanhToan(event) {
+      event.preventDefault();
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (!isLoggedIn) {
+        alert("Bạn cần đăng nhập để tiếp tục thanh toán!");
+        window.location.href = "../html/DangNhap.html"; // đổi nếu trang login khác
+      } else {
+        window.location.href = "./ThanhToan.html";
+      }
+    }
+  </script>
+</body>
+</html>
+
