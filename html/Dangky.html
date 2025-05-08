@@ -378,9 +378,21 @@ footer ul li a:hover {
     const confirmPasswordInput = document.getElementById('confirm-password');
 
     function validateName(name) {
-        const regex = /^[\p{L}][\p{L}\s]{1,49}$/u;
-        return regex.test(name.trim());
+        const trimmed = name.trim();
+        // Kiểm tra độ dài và ký tự hợp lệ trước
+        const basicRegex = /^[\p{L}\s]{2,50}$/u;
+        if (!basicRegex.test(trimmed)) return false;
+    
+        // Kiểm tra từng từ phải viết hoa chữ cái đầu
+        const words = trimmed.split(/\s+/);
+        for (let word of words) {
+            if (!/^[\p{Lu}][\p{Ll}]+$/u.test(word)) {
+                return false;
+            }
+        }
+        return true;
     }
+
 
     function validateEmail(email) {
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
